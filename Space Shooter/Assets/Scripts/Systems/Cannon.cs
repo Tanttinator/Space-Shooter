@@ -5,16 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(FactionContainer))]
 public class Cannon : ShipSystem
 {
-    public GameObject projectile;
+    public CannonData cannon;
     public List<Transform> cannons;
+    Faction faction;
 
     int cannonId = 0;
-
-    private void Awake()
-    {
-        if (projectile.GetComponent<Projectile>() == null)
-            Debug.LogError(gameObject.name + " has been assigned a projectile object without a projectile script!");
-    }
 
     protected override void Effect()
     {
@@ -24,11 +19,20 @@ public class Cannon : ShipSystem
             return;
         }
 
-        GameObject obj = Instantiate(projectile, cannons[cannonId].position, transform.rotation);
-        obj.GetComponent<Projectile>().Setup(GetComponent<FactionContainer>().faction);
+        cannon.Shoot(cannons[cannonId], faction);
 
         cannonId++;
         if (cannonId >= cannons.Count)
             cannonId = 0;
+    }
+
+    protected override float Cooldown()
+    {
+        return 1f / cannon.fireRate;
+    }
+
+    private void Awake()
+    {
+        faction = GetComponent<FactionContainer>().faction;
     }
 }

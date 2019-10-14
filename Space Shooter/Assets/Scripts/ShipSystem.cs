@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Masterclass for all interactable systems in a ship
+[RequireComponent(typeof(Ship))]
 public class ShipSystem : MonoBehaviour
 {
     public float cooldown = 1f;
@@ -14,18 +15,32 @@ public class ShipSystem : MonoBehaviour
             return cooldownProgress <= 0f;
         }
     }
+    protected Ship owner;
 
+    //Handles user activation of the system
     public void Activate()
     {
         if (!canActivate)
             return;
         Effect();
-        cooldownProgress = cooldown;
+        cooldownProgress = Cooldown();
     }
 
+    //What happens when this system is activated
     protected virtual void Effect()
     {
 
+    }
+
+    //How is cooldown calculated
+    protected virtual float Cooldown()
+    {
+        return cooldown;
+    }
+
+    private void Start()
+    {
+        owner = GetComponent<Ship>();
     }
 
     protected virtual void Update()

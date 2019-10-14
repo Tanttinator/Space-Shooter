@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class Projectile : MonoBehaviour
 {
-    public float speed = 10f;
-    public float damage = 10f;
-    public float ttl = 10f;
-    float time = 0f;
+    float damage;
+    float speed;
+    float ttl;
 
+    float time = 0f;
     Faction faction;
     bool isSetup = false;
 
-    public void Setup(Faction faction)
+    public void Setup(float damage, float speed, float ttl, Faction faction)
     {
+        this.damage = damage;
+        this.speed = speed;
+        this.ttl = ttl;
         this.faction = faction;
         isSetup = true;
     }
@@ -26,7 +29,7 @@ public class Projectile : MonoBehaviour
         Health health = collision.GetComponent<Health>();
         if(health == null || faction.IsEnemy(collision.GetComponent<FactionContainer>().faction))
         {
-            health?.Damage(damage * (1 - Mathf.Pow(time, 2) / Mathf.Pow(ttl, 2)));
+            health?.Damage(damage / (1 + time / ttl));
             Destroy(gameObject);
         }
     }

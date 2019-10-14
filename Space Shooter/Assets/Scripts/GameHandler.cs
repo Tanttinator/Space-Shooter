@@ -12,9 +12,12 @@ public class GameHandler : MonoBehaviour
     
     public GameObjectEvent onSpawnPlayer;
 
+    public static Ship playerShip;
+
     void SpawnPlayer()
     {
         GameObject obj = Instantiate(player, spawnPoint, Quaternion.identity);
+        playerShip = obj.GetComponent<Ship>();
         onSpawnPlayer?.Invoke(obj);
     }
 

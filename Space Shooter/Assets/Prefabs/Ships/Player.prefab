@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!58 &-3477389893803844039
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232932607337730816}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.06706029}
+  serializedVersion: 2
+  m_Radius: 0.3670603
+--- !u!114 &-4163883051734738886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232932607337730816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a822268bf391df3459425c8062a02b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  credits: 0
 --- !u!114 &-3950813552024951603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,12 +41,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc348ca2c6c99b44a8c21164d209ecf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0.33
-  projectile: {fileID: 827494194157081251, guid: 6edbbd263aa72e04d91d35301833414b,
-    type: 3}
+  cooldown: 0
+  cannon: {fileID: 11400000, guid: d81c274123c0cc14b8a6b86693f4d537, type: 2}
   cannons:
   - {fileID: 3526025776210064729}
   - {fileID: 2323401031772235438}
+--- !u!114 &-1642446774623231901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232932607337730816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a151ef6a4522342abd8116942316b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 10
+  speedMod: 2
+  boostTime: 3
 --- !u!114 &4602256249683335926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,6 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   systems:
   - {fileID: -3950813552024951603}
+  - {fileID: -1642446774623231901}
 --- !u!1 &3782718591836613684
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,16 +143,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4985394621275857930, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
-        type: 3}
-      propertyPath: faction
-      value: 
-      objectReference: {fileID: 11400000, guid: e6a317c2d21e55844942c47cd0b62d09,
-        type: 2}
     - target: {fileID: 4393082550381208322, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393082550381208322, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393082550381208321, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4393082550381208326, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}
@@ -165,6 +213,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985394621275857930, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: faction
+      value: 
+      objectReference: {fileID: 11400000, guid: e6a317c2d21e55844942c47cd0b62d09,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e228eaf49b2c0744a1e3eb7fb38da23, type: 3}
 --- !u!1 &2232932607337730816 stripped

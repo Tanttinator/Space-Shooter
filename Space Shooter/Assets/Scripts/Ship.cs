@@ -17,4 +17,22 @@ public class Ship : MonoBehaviour
     {
         transform.Rotate(Vector3.forward, turnSpeed * direction * Time.deltaTime);
     }
+
+    public void MoveTowards(Vector2 target)
+    {
+        RotateTowards(target);
+        /*if (Vector2.Angle(transform.up, target - (Vector2)transform.position) < 90)
+            Move(1);*/
+        Move(1);
+    }
+
+    public void RotateTowards(Vector2 target)
+    {
+        Rotate(Mathf.Sign(Vector2.SignedAngle(transform.up, target - (Vector2)transform.position)));
+    }
+
+    public float Angle(Ship b)
+    {
+        return Vector2.Angle(transform.up, (Vector2)b.transform.position - (Vector2)transform.position);
+    }
 }

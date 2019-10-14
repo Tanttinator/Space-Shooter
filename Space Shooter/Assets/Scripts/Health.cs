@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
 
     public UnityEvent onObjectKilled;
 
+    public LootTable loot;
+
     public void Heal(float amount)
     {
         health = Mathf.Min(maxHealth, health + amount);
@@ -26,6 +28,11 @@ public class Health : MonoBehaviour
 
     void Die()
     {
+        if(loot != null)
+        {
+            foreach (GameObject item in loot.Drop())
+                Instantiate(item, (Vector2)transform.position + Random.insideUnitCircle, Quaternion.identity);
+        }
         onObjectKilled?.Invoke();
         Destroy(gameObject);
     }

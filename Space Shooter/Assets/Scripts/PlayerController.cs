@@ -19,8 +19,13 @@ public class PlayerController : MonoBehaviour
     {
         ship.Move(Input.GetAxis("Vertical"));
         ship.Rotate(-Input.GetAxis("Horizontal"));
+    }
 
+    private void LateUpdate()
+    {
         if (Input.GetKey(KeyCode.Space) && systems.Length > 0)
             systems[0].Activate();
+        if (Input.GetKeyDown(KeyCode.LeftShift) && systems.Length > 1)
+            systems[1].Activate();
     }
 }
