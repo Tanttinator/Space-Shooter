@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c092dd5e59946f449d4521f7223a6ef, type: 3}
-  m_Name: Pickup
+  m_Script: {fileID: 11500000, guid: 739399a8aa6a1094f90a7c339e6702d1, type: 3}
+  m_Name: LaserMedium
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 671b9c737d9b90f4f92e7dab63e0cd19, type: 3}
-  volume: 1
-  range: 25
+  displayName: Medium Laser
+  weight: 10
+  fireRate: 2
+  damage: 30
+  prefab: {fileID: 1214123937749718154, guid: e0e2a6016b73690438edb8ada54c0abb, type: 3}
+  speed: 15
+  ttl: 5

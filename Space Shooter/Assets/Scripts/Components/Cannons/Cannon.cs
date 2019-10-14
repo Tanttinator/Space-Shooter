@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Data for all the different types of cannons equippable
-[CreateAssetMenu(fileName = "Cannon", menuName = "Cannon")]
-public class CannonData : ScriptableObject
+[CreateAssetMenu(fileName = "Cannon", menuName = "Component/Cannon")]
+public class Cannon : Component
 {
     [Header("Cannon Stats")]
     //Shots per second

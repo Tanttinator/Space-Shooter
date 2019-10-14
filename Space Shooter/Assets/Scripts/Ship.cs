@@ -3,19 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Handles ship movement
+[RequireComponent(typeof(Health), typeof(Weapons))]
 public class Ship : MonoBehaviour
 {
-    public float speed = 5f;
-    public float turnSpeed = 10f;
+    public Engine engine;
+    Health health;
+    Weapons weapons;
+
+    public float Weight
+    {
+        get
+        {
+            return engine.weight + health.hull.weight + health.shield.weight + (weapons.cannon != null? weapons.cannon.weight : 0);
+        }
+    }
+
+    public float Speed
+    {
+        get
+        {
+            return engine.speed * 20 / Weight;
+        }
+    }
+
+    public float TurnSpeed
+    {
+        get
+        {
+            return engine.turnSpeed * 200 / Weight;
+        }
+    }
 
     public void Move(float direction)
     {
-        transform.Translate(Vector3.up * speed * direction * Time.deltaTime);
+        transform.Translate(Vector3.up * Speed * direction * Time.deltaTime);
     }
 
     public void Rotate(float direction)
     {
-        transform.Rotate(Vector3.forward, turnSpeed * direction * Time.deltaTime);
+        transform.Rotate(Vector3.forward, TurnSpeed * direction * Time.deltaTime);
     }
 
     public void MoveTowards(Vector2 target)
@@ -34,5 +60,11 @@ public class Ship : MonoBehaviour
     public float Angle(Ship b)
     {
         return Vector2.Angle(transform.up, (Vector2)b.transform.position - (Vector2)transform.position);
+    }
+
+    private void Awake()
+    {
+        health = GetComponent<Health>();
+        weapons = GetComponent<Weapons>();
     }
 }

@@ -28,24 +28,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4b23341396a09498fb03c58b9613f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  systems:
-  - {fileID: 6812729847027718430}
---- !u!114 &6812729847027718430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4075736894883401672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d48df2f00d3c5d43ab79f2e0e8ef224, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 30
-  activationSound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
-  spawnPoint: {fileID: 4444677537190032960}
-  ship: {fileID: 5935743432323273520, guid: f05a1a12349690e458e8fead88fec7c4, type: 3}
 --- !u!1 &8891048628661469577
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,6 +80,12 @@ PrefabInstance:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4393082550381208320, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: engine
+      value: 
+      objectReference: {fileID: 11400000, guid: 59c4cfc906b03484294a7a1ff0f69c35,
+        type: 2}
     - target: {fileID: 4393082550381208321, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}
       propertyPath: m_Sprite
@@ -175,6 +163,18 @@ PrefabInstance:
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 11400000, guid: 6345162998cea9546bbbc4cc5ff56826,
+        type: 2}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: hull
+      value: 
+      objectReference: {fileID: 11400000, guid: 78977b985e6f0164c9aab5d7bf0c4811,
+        type: 2}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: shield
+      value: 
+      objectReference: {fileID: 11400000, guid: f8370a5e1156d1947866a673a14b724c,
         type: 2}
     - target: {fileID: 4985394621275857930, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}

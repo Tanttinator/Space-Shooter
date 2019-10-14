@@ -7,12 +7,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Ship ship;
-
-    public ShipSystem[] systems;
+    Weapons weapons;
 
     private void Awake()
     {
         ship = GetComponent<Ship>();
+        weapons = GetComponent<Weapons>();
     }
 
     void Update()
@@ -23,9 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && systems.Length > 0)
-            systems[0].Activate();
-        if (Input.GetKeyDown(KeyCode.LeftShift) && systems.Length > 1)
-            systems[1].Activate();
+        if (Input.GetKey(KeyCode.Space))
+            weapons.Shoot();
     }
 }

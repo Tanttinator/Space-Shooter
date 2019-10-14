@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5365f63fae9578046a5c04a18153eec5, type: 3}
-  m_Name: MediumLaserRed
+  m_Script: {fileID: 11500000, guid: 739399a8aa6a1094f90a7c339e6702d1, type: 3}
+  m_Name: LaserLight
   m_EditorClassIdentifier: 
-  fireRate: 1
-  damage: 30
-  prefab: {fileID: 1214123937749718154, guid: e0e2a6016b73690438edb8ada54c0abb, type: 3}
-  speed: 12
-  ttl: 10
+  displayName: Light Lazer
+  weight: 5
+  fireRate: 3
+  damage: 15
+  prefab: {fileID: 827494194157081251, guid: 6edbbd263aa72e04d91d35301833414b, type: 3}
+  speed: 20
+  ttl: 5

@@ -8,11 +8,9 @@ public class AI : MonoBehaviour
 
     IState currentState;
 
-    public List<ShipSystem> systems;
-
     private void Start()
     {
-        ChangeState(new StateAggro(GetComponent<Ship>(), PlayerHandler.playerShip, systems));
+        ChangeState(new StateAggro(GetComponent<Ship>(), PlayerHandler.playerShip));
     }
 
     void Update()
@@ -83,13 +81,13 @@ public class StateAggro : IState
 
     Ship owner;
     Ship target;
-    List<ShipSystem> systems;
+    Weapons weapons;
 
-    public StateAggro(Ship owner, Ship target, List<ShipSystem> systems)
+    public StateAggro(Ship owner, Ship target)
     {
         this.owner = owner;
         this.target = target;
-        this.systems = systems;
+        weapons = owner.GetComponent<Weapons>();
     }
 
     public void Enter()
@@ -107,8 +105,6 @@ public class StateAggro : IState
         if (target == null)
             return;
         owner.MoveTowards(target.transform.position);
-
-        foreach (ShipSystem ssystem in systems)
-            ssystem.Activate();
+        weapons.Shoot();
     }
 }

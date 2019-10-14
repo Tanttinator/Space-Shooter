@@ -29,40 +29,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   credits: 0
---- !u!114 &-3950813552024951603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2232932607337730816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc348ca2c6c99b44a8c21164d209ecf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 0
-  activationSound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
-  cannon: {fileID: 11400000, guid: d81c274123c0cc14b8a6b86693f4d537, type: 2}
-  cannons:
-  - {fileID: 3526025776210064729}
-  - {fileID: 2323401031772235438}
---- !u!114 &-1642446774623231901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2232932607337730816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9a151ef6a4522342abd8116942316b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 10
-  activationSound: {fileID: 0}
-  speedMod: 2
-  boostTime: 3
 --- !u!114 &4602256249683335926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,9 +41,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99260744c1357974491147cdb126da90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  systems:
-  - {fileID: -3950813552024951603}
-  - {fileID: -1642446774623231901}
 --- !u!1 &3782718591836613684
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +108,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5639787288359006838, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: cannons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5639787288359006838, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: cannons.Array.data[0]
+      value: 
+      objectReference: {fileID: 3526025776210064729}
+    - target: {fileID: -5639787288359006838, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: cannons.Array.data[1]
+      value: 
+      objectReference: {fileID: 2323401031772235438}
+    - target: {fileID: -5639787288359006838, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: cannon
+      value: 
+      objectReference: {fileID: 11400000, guid: f6757fe694dee854194c24a351d2d810,
+        type: 2}
     - target: {fileID: 4393082550381208322, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}
       propertyPath: m_Name
@@ -155,6 +139,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 4393082550381208320, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: engine
+      value: 
+      objectReference: {fileID: 11400000, guid: 909b807dd82726945919ddc68a1c10f9,
+        type: 2}
     - target: {fileID: 4393082550381208321, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}
       propertyPath: m_SortingOrder
@@ -225,6 +215,18 @@ PrefabInstance:
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 11400000, guid: 6345162998cea9546bbbc4cc5ff56826,
+        type: 2}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: hull
+      value: 
+      objectReference: {fileID: 11400000, guid: 0dc0f86bb72a8494c9bc3a68fe5bb669,
+        type: 2}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: shield
+      value: 
+      objectReference: {fileID: 11400000, guid: 95003cae935252547a77d919f91537ab,
         type: 2}
     - target: {fileID: 4985394621275857930, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}

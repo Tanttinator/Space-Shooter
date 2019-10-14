@@ -88,26 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4b23341396a09498fb03c58b9613f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  systems:
-  - {fileID: 5558821891463918981}
---- !u!114 &5558821891463918981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5935743432323273520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc348ca2c6c99b44a8c21164d209ecf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 0
-  activationSound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
-  cannon: {fileID: 11400000, guid: 1eed3c947916d284b893bf3d2a89359a, type: 2}
-  cannons:
-  - {fileID: 5165457823926140034}
-  - {fileID: 8253122273344690486}
 --- !u!1001 &7973801803333300274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,6 +95,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5639787288359006838, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: cannons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5639787288359006838, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: cannons.Array.data[0]
+      value: 
+      objectReference: {fileID: 5165457823926140034}
+    - target: {fileID: -5639787288359006838, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: cannons.Array.data[1]
+      value: 
+      objectReference: {fileID: 8253122273344690486}
+    - target: {fileID: -5639787288359006838, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: cannon
+      value: 
+      objectReference: {fileID: 11400000, guid: ecaebcc9c6012fb4eabea6eca9d88df0,
+        type: 2}
     - target: {fileID: 4393082550381208322, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}
       propertyPath: m_Name
@@ -130,6 +131,12 @@ PrefabInstance:
       propertyPath: turnSpeed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4393082550381208320, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: engine
+      value: 
+      objectReference: {fileID: 11400000, guid: 8406ef93dce253441b155127ebf02cbc,
+        type: 2}
     - target: {fileID: 4393082550381208321, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}
       propertyPath: m_Sprite
@@ -202,6 +209,18 @@ PrefabInstance:
       propertyPath: deathSound
       value: 
       objectReference: {fileID: 11400000, guid: 6345162998cea9546bbbc4cc5ff56826,
+        type: 2}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: hull
+      value: 
+      objectReference: {fileID: 11400000, guid: c50768620dccdfb45a3d1b5ae12a4255,
+        type: 2}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: shield
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c5441415488d9a4e880cee4ec98ae51,
         type: 2}
     - target: {fileID: 4985394621275857930, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}

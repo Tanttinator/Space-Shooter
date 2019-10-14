@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4393082550381208320}
   - component: {fileID: 9139144002069630248}
   - component: {fileID: 4985394621275857930}
+  - component: {fileID: -5639787288359006838}
   m_Layer: 8
   m_Name: Ship
   m_TagString: Untagged
@@ -132,10 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  onObjectKilled:
-    m_PersistentCalls:
-      m_Calls: []
   loot: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!114 &4985394621275857930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,3 +148,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faction: {fileID: 0}
+--- !u!114 &-5639787288359006838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4393082550381208322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf4af9b8292a364b8cd0a7b618181d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannon: {fileID: 0}
+  cannons: []

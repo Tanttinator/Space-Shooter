@@ -6,7 +6,9 @@ using System;
 
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 100;
+    public Hull hull;
+    public Shield shield;
+
     public float health { get; protected set; }
 
     public Action onObjectKilled;
@@ -18,14 +20,14 @@ public class Health : MonoBehaviour
 
     public void Heal(float amount)
     {
-        health = Mathf.Min(maxHealth, health + amount);
-        onHealthChanged?.Invoke(health, maxHealth);
+        health = Mathf.Min(hull.maxHealth, health + amount);
+        onHealthChanged?.Invoke(health, hull.maxHealth);
     }
 
     public void Damage(float amount)
     {
         health = Mathf.Max(health - amount, 0);
-        onHealthChanged?.Invoke(health, maxHealth);
+        onHealthChanged?.Invoke(health, hull.maxHealth);
         if (health <= 0)
         {
             Die();
@@ -47,6 +49,6 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
-        health = maxHealth;
+        health = hull.maxHealth;
     }
 }

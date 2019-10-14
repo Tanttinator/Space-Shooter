@@ -20,7 +20,7 @@ public class PlayerHandler : MonoBehaviour
         playerShip = obj.GetComponent<Ship>();
         Health h = obj.GetComponent<Health>();
         h.onHealthChanged += OnHealthChanged;
-        OnHealthChanged(h.health, h.maxHealth);
+        OnHealthChanged(h.health, h.hull.maxHealth);
         onSpawnPlayer?.Invoke(obj);
     }
 

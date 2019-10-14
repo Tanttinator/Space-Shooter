@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5365f63fae9578046a5c04a18153eec5, type: 3}
-  m_Name: LightLaserGreen
+  m_Script: {fileID: 11500000, guid: c58a1b11bb9b81b40916846af4638a74, type: 3}
+  m_Name: Medium
   m_EditorClassIdentifier: 
-  fireRate: 2
-  damage: 20
-  prefab: {fileID: 827494194157081251, guid: 6edbbd263aa72e04d91d35301833414b, type: 3}
-  speed: 15
-  ttl: 10
+  displayName: Medium Engines
+  weight: 5
+  speed: 7
+  turnSpeed: 8
