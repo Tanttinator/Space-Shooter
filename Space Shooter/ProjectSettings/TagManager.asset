@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Ship
+  - Projectile
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ships
+    uniqueID: 4050946613
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1756333309
     locked: 0

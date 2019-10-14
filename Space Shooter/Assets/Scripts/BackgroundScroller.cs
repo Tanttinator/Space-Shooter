@@ -16,17 +16,7 @@ public class BackgroundScroller : MonoBehaviour
     [Range(0, 10)]
     public int parallaxFactor = 0;
 
-    void Update()
-    {
-        ScrollAll();
-    }
-
-    private void Awake()
-    {
-        SetAlphas();
-    }
-
-    //Scroll all textures depending on our parents position
+    //Scroll all textures
     void ScrollAll()
     {
         for (int i = 0; i < backgrounds.Count; i++)
@@ -35,7 +25,7 @@ public class BackgroundScroller : MonoBehaviour
         }
     }
 
-    //Scroll one texture
+    //Scroll one texture depending on our parents position
     void Scroll(Material mat, int parallax)
     {
         mat.mainTextureOffset = transform.position / parallax;
@@ -46,10 +36,22 @@ public class BackgroundScroller : MonoBehaviour
     {
         for(int i = 0; i < backgrounds.Count; i++)
         {
+            if (backgrounds[i] == null)
+                continue;
             backgrounds[i].transform.position = new Vector3(transform.position.x, transform.position.y, backgrounds.Count - i);
             Material mat = backgrounds[i].sharedMaterial;
             mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, Mathf.Pow(alphaFactor, i));
         }
+    }
+
+    void Update()
+    {
+        ScrollAll();
+    }
+
+    private void Awake()
+    {
+        SetAlphas();
     }
 
     private void OnValidate()
