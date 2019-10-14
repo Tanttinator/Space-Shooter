@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour
         if (!isSetup)
             return;
         Health health = collision.GetComponent<Health>();
-        if(health == null || faction.IsEnemy(collision.GetComponent<FactionContainer>().faction))
+        if(health == null || faction.IsEnemy(health.faction))
         {
             health?.Damage(damage / (1 + time / ttl));
             Destroy(gameObject);

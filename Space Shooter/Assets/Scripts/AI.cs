@@ -39,6 +39,7 @@ public interface IState
 public class StateIdle : IState
 {
     Ship ship;
+    EntityShip entity;
     Vector2 wanderTarget;
 
     public StateIdle(Ship ship)
@@ -62,7 +63,7 @@ public class StateIdle : IState
         if (NeedTarget())
             wanderTarget = GetTarget();
 
-        ship.MoveTowards(wanderTarget);
+        ship.entity.MoveTowards(wanderTarget);
     }
 
     bool NeedTarget()
@@ -81,13 +82,11 @@ public class StateAggro : IState
 
     Ship owner;
     Ship target;
-    Weapons weapons;
 
     public StateAggro(Ship owner, Ship target)
     {
         this.owner = owner;
         this.target = target;
-        weapons = owner.GetComponent<Weapons>();
     }
 
     public void Enter()
@@ -104,7 +103,8 @@ public class StateAggro : IState
     {
         if (target == null)
             return;
-        owner.MoveTowards(target.transform.position);
-        weapons.Shoot();
+        owner.entity.MoveTowards(target.transform.position);
+        if(owner.HasWeapons)
+            owner.weapons.Shoot();
     }
 }

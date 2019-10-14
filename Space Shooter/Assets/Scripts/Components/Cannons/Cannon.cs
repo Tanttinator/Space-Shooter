@@ -9,6 +9,7 @@ public class Cannon : Component
     //Shots per second
     [Tooltip("Shots per second")] public float fireRate = 1f;
     public float damage = 10f;
+    public Sound sound;
 
     [Header("Projectile Stats")]
     public GameObject prefab;
@@ -19,5 +20,6 @@ public class Cannon : Component
     {
         GameObject obj = Instantiate(prefab, cannon.position, cannon.rotation);
         obj.GetComponent<Projectile>().Setup(damage, speed, ttl, faction);
+        SoundHandler.Play(sound, cannon.position);
     }
 }

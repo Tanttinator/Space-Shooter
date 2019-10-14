@@ -25,7 +25,7 @@ public class ProgressBar : MonoBehaviour
     {
         SetValue(value / maxValue);
         if (wholeValue)
-            text.text = Mathf.Round(value).ToString();
+            text.text = Mathf.Round(value) + " / " + Mathf.Round(maxValue);
         else
             text.text = Mathf.Round(value / maxValue * 100).ToString();
     }

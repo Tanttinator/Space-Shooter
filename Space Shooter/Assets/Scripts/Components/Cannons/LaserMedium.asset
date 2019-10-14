@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Medium Laser
   weight: 10
+  hullType: 0
   fireRate: 2
   damage: 30
+  sound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
   prefab: {fileID: 1214123937749718154, guid: e0e2a6016b73690438edb8ada54c0abb, type: 3}
   speed: 15
   ttl: 5

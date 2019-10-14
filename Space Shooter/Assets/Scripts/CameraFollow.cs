@@ -11,7 +11,7 @@ public class CameraFollow : MonoBehaviour
     public void StartFollow(GameObject target)
     {
         this.target = target.transform;
-        target.GetComponent<Health>().onObjectKilled += StopFollow;
+        target.GetComponent<Health>().onDeath += StopFollow;
         isFollowing = true;
     }
 

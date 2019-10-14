@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Capital Ship Engines
   weight: 10
+  hullType: 0
   speed: 10
-  turnSpeed: 10
+  turnSpeed: 8

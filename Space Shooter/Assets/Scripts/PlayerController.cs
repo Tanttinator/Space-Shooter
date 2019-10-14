@@ -7,23 +7,21 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Ship ship;
-    Weapons weapons;
 
     private void Awake()
     {
         ship = GetComponent<Ship>();
-        weapons = GetComponent<Weapons>();
     }
 
     void Update()
     {
-        ship.Move(Input.GetAxis("Vertical"));
-        ship.Rotate(-Input.GetAxis("Horizontal"));
+        ship.entity.Move(Input.GetAxis("Vertical"));
+        ship.entity.Rotate(-Input.GetAxis("Horizontal"));
     }
 
     private void LateUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
-            weapons.Shoot();
+        if (Input.GetKey(KeyCode.Space) && ship.HasWeapons)
+            ship.weapons.Shoot();
     }
 }

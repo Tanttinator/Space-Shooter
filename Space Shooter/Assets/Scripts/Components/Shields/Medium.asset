@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Medium Shields
   weight: 10
+  hullType: 0
   maxCapacity: 100
-  refreshRate: 3
+  chargeRate: 5
+  damageMod: 0.6
+  chargeStartDelay: 10

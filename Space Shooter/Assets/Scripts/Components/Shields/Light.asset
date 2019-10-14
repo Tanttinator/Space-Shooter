@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Light Shields
   weight: 5
+  hullType: 0
   maxCapacity: 50
-  refreshRate: 1
+  chargeRate: 5
+  damageMod: 0.6
+  chargeStartDelay: 5

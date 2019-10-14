@@ -8,7 +8,7 @@ public class LootTable : ScriptableObject
 {
     public List<LootItem> loot;
 
-    public List<GameObject> Drop()
+    public List<GameObject> GetItems()
     {
         List<GameObject> items = new List<GameObject>();
         int total = 0;
@@ -27,6 +27,12 @@ public class LootTable : ScriptableObject
         }
 
         return items;
+    }
+
+    public void Drop(Vector2 position)
+    {
+        foreach (GameObject item in GetItems())
+            Instantiate(item, position + Random.insideUnitCircle * 3f, Quaternion.identity);
     }
 
     [System.Serializable]

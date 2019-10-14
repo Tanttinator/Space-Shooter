@@ -6,6 +6,9 @@ using UnityEngine;
 public class Shield : Component
 {
     [Header("Shield Stats")]
-    public int maxCapacity;
-    public float refreshRate;
+    public float maxCapacity;
+    public float chargeRate;
+    [Range(0f, 1f)]
+    public float damageMod = 0.5f;
+    public float chargeStartDelay = 5f;
 }

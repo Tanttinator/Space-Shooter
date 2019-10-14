@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayName: Capital Ship Shields
   weight: 20
+  hullType: 0
   maxCapacity: 200
-  refreshRate: 5
+  chargeRate: 5
+  damageMod: 0.6
+  chargeStartDelay: 20
