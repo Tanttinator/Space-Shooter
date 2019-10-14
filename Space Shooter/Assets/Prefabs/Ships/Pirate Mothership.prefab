@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 30
+  activationSound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
   spawnPoint: {fileID: 4444677537190032960}
   ship: {fileID: 5935743432323273520, guid: f05a1a12349690e458e8fead88fec7c4, type: 3}
 --- !u!1 &8891048628661469577
@@ -167,7 +168,13 @@ PrefabInstance:
         type: 3}
       propertyPath: loot
       value: 
-      objectReference: {fileID: 11400000, guid: 845ab08de24d32e418324afed9a49c18,
+      objectReference: {fileID: 11400000, guid: a0a079657103db64ab198d860d3572cc,
+        type: 2}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 6345162998cea9546bbbc4cc5ff56826,
         type: 2}
     - target: {fileID: 4985394621275857930, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}

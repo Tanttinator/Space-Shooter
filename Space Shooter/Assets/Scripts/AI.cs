@@ -12,7 +12,7 @@ public class AI : MonoBehaviour
 
     private void Start()
     {
-        ChangeState(new StateAggro(GetComponent<Ship>(), GameHandler.playerShip, systems));
+        ChangeState(new StateAggro(GetComponent<Ship>(), PlayerHandler.playerShip, systems));
     }
 
     void Update()

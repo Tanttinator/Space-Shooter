@@ -44,6 +44,9 @@ TagManager:
   - name: Ships
     uniqueID: 4050946613
     locked: 0
+  - name: Pickups
+    uniqueID: 1653551675
+    locked: 0
   - name: Projectiles
     uniqueID: 1756333309
     locked: 0

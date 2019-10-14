@@ -42,6 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
+  activationSound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
   cannon: {fileID: 11400000, guid: d81c274123c0cc14b8a6b86693f4d537, type: 2}
   cannons:
   - {fileID: 3526025776210064729}
@@ -59,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 10
+  activationSound: {fileID: 0}
   speedMod: 2
   boostTime: 3
 --- !u!114 &4602256249683335926
@@ -218,6 +220,12 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 6345162998cea9546bbbc4cc5ff56826,
+        type: 2}
     - target: {fileID: 4985394621275857930, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}
       propertyPath: faction

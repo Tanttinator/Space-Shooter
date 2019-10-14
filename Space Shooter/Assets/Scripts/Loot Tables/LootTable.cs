@@ -22,6 +22,8 @@ public class LootTable : ScriptableObject
         {
             if (item.chance * 1.0f / total > Random.value)
                 items.Add(item.item);
+            for (int i = 0; i < item.guaranteed; i++)
+                items.Add(item.item);
         }
 
         return items;
@@ -32,5 +34,6 @@ public class LootTable : ScriptableObject
     {
         public GameObject item;
         public int chance;
+        public int guaranteed;
     }
 }

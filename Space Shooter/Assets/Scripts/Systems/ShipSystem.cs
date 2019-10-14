@@ -16,6 +16,7 @@ public class ShipSystem : MonoBehaviour
         }
     }
     protected Ship owner;
+    public Sound activationSound;
 
     //Handles user activation of the system
     public void Activate()
@@ -23,6 +24,8 @@ public class ShipSystem : MonoBehaviour
         if (!canActivate)
             return;
         Effect();
+        if (activationSound != null)
+            SoundHandler.Play(activationSound, transform.position);
         cooldownProgress = Cooldown();
     }
 

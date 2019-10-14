@@ -60,6 +60,22 @@ Transform:
   m_Father: {fileID: 5935743432323273524}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1771223850912806073
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5935743432323273520}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.029986262}
+  serializedVersion: 2
+  m_Radius: 0.47001374
 --- !u!114 &-5048908457130617055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,26 +103,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
+  activationSound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
   cannon: {fileID: 11400000, guid: 1eed3c947916d284b893bf3d2a89359a, type: 2}
   cannons:
   - {fileID: 5165457823926140034}
   - {fileID: 8253122273344690486}
---- !u!58 &1771223850912806073
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5935743432323273520}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.029986262}
-  serializedVersion: 2
-  m_Radius: 0.47001374
 --- !u!1001 &7973801803333300274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,6 +196,12 @@ PrefabInstance:
       propertyPath: loot
       value: 
       objectReference: {fileID: 11400000, guid: f7cf40fdd0cc1154c971982a5374e02a,
+        type: 2}
+    - target: {fileID: 9139144002069630248, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
+        type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 6345162998cea9546bbbc4cc5ff56826,
         type: 2}
     - target: {fileID: 4985394621275857930, guid: 5e228eaf49b2c0744a1e3eb7fb38da23,
         type: 3}
