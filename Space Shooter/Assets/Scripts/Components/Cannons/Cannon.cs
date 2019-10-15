@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Cannon", menuName = "Component/Cannon")]
-public class Cannon : Component
+public class Cannon : Activatable
 {
     [Header("Cannon Stats")]
     //Shots per second
-    [Tooltip("Shots per second")] public float fireRate = 1f;
     public float damage = 10f;
     public Sound sound;
 
@@ -21,5 +20,10 @@ public class Cannon : Component
         GameObject obj = Instantiate(prefab, cannon.position, cannon.rotation);
         obj.GetComponent<Projectile>().Setup(damage, speed, ttl, faction);
         SoundHandler.Play(sound, cannon.position);
+    }
+
+    public override Activation GetActivation(Ship ship)
+    {
+        return new Activation(ship, cooldown, (s) => { s.weapons?.Shoot(); });
     }
 }

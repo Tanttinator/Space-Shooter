@@ -104,7 +104,7 @@ public class StateAggro : IState
         if (target == null)
             return;
         owner.entity.MoveTowards(target.transform.position);
-        if(owner.HasWeapons)
-            owner.weapons.Shoot();
+        for (int i = 0; i < owner.Activatables.Length; i++)
+            owner.Activate(i);
     }
 }

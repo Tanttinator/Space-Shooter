@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour
     {
         get
         {
-            return 5f;
+            return 5f * speedMod;
         }
     }
     protected virtual float TurnSpeed
@@ -17,6 +17,18 @@ public class Entity : MonoBehaviour
         {
             return 180f;
         }
+    }
+
+    protected float speedMod = 1f;
+
+    public void AddSpeedMod(float mod)
+    {
+        speedMod *= mod;
+    }
+
+    public void RemoveSpeedMod(float mod)
+    {
+        speedMod /= mod;
     }
 
     public void Move(float direction)

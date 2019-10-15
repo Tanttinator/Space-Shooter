@@ -133,6 +133,52 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 931927833862077412, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395046594405134647, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: faction
+      value: 
+      objectReference: {fileID: 11400000, guid: e6a317c2d21e55844942c47cd0b62d09,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: activatablesList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: hull
+      value: 
+      objectReference: {fileID: 11400000, guid: 0dc0f86bb72a8494c9bc3a68fe5bb669,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: engine
+      value: 
+      objectReference: {fileID: 11400000, guid: 909b807dd82726945919ddc68a1c10f9,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: cannon
+      value: 
+      objectReference: {fileID: 11400000, guid: f6757fe694dee854194c24a351d2d810,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: shield
+      value: 
+      objectReference: {fileID: 11400000, guid: 95003cae935252547a77d919f91537ab,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: activatablesList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2354a9da98ef6c947be113287c3de8aa,
+        type: 2}
     - target: {fileID: 8727725559771215218, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -188,41 +234,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 931927833862077412, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4395046594405134647, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
-        type: 3}
-      propertyPath: faction
-      value: 
-      objectReference: {fileID: 11400000, guid: e6a317c2d21e55844942c47cd0b62d09,
-        type: 2}
-    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
-        type: 3}
-      propertyPath: hull
-      value: 
-      objectReference: {fileID: 11400000, guid: 0dc0f86bb72a8494c9bc3a68fe5bb669,
-        type: 2}
-    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
-        type: 3}
-      propertyPath: engine
-      value: 
-      objectReference: {fileID: 11400000, guid: 909b807dd82726945919ddc68a1c10f9,
-        type: 2}
-    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
-        type: 3}
-      propertyPath: cannon
-      value: 
-      objectReference: {fileID: 11400000, guid: f6757fe694dee854194c24a351d2d810,
-        type: 2}
-    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
-        type: 3}
-      propertyPath: shield
-      value: 
-      objectReference: {fileID: 11400000, guid: 95003cae935252547a77d919f91537ab,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ea9535b4dcb4d44aaabef2271fe01a1, type: 3}
 --- !u!1 &8087449223953296302 stripped

@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && ship.HasWeapons)
-            ship.weapons.Shoot();
+        if (Input.GetKey(KeyCode.Space))
+            ship.Activate(0);
+        if (Input.GetKey(KeyCode.LeftShift))
+            ship.Activate(1);
     }
 }

@@ -8,6 +8,11 @@ public class Component : ScriptableObject
     public string displayName;
     public float weight;
     public HullType hullType;
+
+    public virtual void OnEquip(Ship ship)
+    {
+
+    }
 }
 
 public enum HullType

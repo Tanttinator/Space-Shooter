@@ -28,6 +28,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate Mothership
       objectReference: {fileID: 0}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: activatablesList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: hull
+      value: 
+      objectReference: {fileID: 11400000, guid: 78977b985e6f0164c9aab5d7bf0c4811,
+        type: 2}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: engine
+      value: 
+      objectReference: {fileID: 11400000, guid: 59c4cfc906b03484294a7a1ff0f69c35,
+        type: 2}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: shield
+      value: 
+      objectReference: {fileID: 11400000, guid: f8370a5e1156d1947866a673a14b724c,
+        type: 2}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: activatablesList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e00be5e689ba0e34fab80fc1123fc7cf,
+        type: 2}
     - target: {fileID: 5636636903080749137, guid: dc54f1e63825a014db7fed97196ad052,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -100,24 +129,6 @@ PrefabInstance:
       propertyPath: loot
       value: 
       objectReference: {fileID: 11400000, guid: a0a079657103db64ab198d860d3572cc,
-        type: 2}
-    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
-        type: 3}
-      propertyPath: hull
-      value: 
-      objectReference: {fileID: 11400000, guid: 78977b985e6f0164c9aab5d7bf0c4811,
-        type: 2}
-    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
-        type: 3}
-      propertyPath: engine
-      value: 
-      objectReference: {fileID: 11400000, guid: 59c4cfc906b03484294a7a1ff0f69c35,
-        type: 2}
-    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
-        type: 3}
-      propertyPath: shield
-      value: 
-      objectReference: {fileID: 11400000, guid: f8370a5e1156d1947866a673a14b724c,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc54f1e63825a014db7fed97196ad052, type: 3}
