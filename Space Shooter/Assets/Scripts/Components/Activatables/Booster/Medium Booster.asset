@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6dd4155fb4bc64aac34b4516a7f200, type: 3}
   m_Name: Medium Booster
   m_EditorClassIdentifier: 
-  displayName: Medium Booster
+  name: Medium Booster
   weight: 5
-  hullType: 0
-  cooldown: 15
+  hullType: 1
+  cooldown: 0
   speedMod: 3
-  duration: 4

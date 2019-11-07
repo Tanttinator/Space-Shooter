@@ -105,6 +105,9 @@ public class StateAggro : IState
             return;
         owner.entity.MoveTowards(target.transform.position);
         for (int i = 0; i < owner.Activatables.Length; i++)
+        {
             owner.Activate(i);
+            owner.Deactivate(i);
+        }
     }
 }

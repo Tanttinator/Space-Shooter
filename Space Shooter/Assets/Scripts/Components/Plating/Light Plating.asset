@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a42edeba5ccd324aab5815587a40c75, type: 3}
-  m_Name: Medium
+  m_Script: {fileID: 11500000, guid: 0f8558c78189bf941a247fd155715feb, type: 3}
+  m_Name: Light Plating
   m_EditorClassIdentifier: 
-  name: Medium Shields
+  name: Light Plating
   weight: 10
   hullType: 0
-  maxCapacity: 100
-  chargeRate: 5
-  damageMod: 0.6
-  chargeStartDelay: 10
+  damageMod: 0.1

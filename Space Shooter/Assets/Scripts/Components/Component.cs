@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Component : ScriptableObject
+public class Component : Item
 {
     [Header("Component Stats")]
-    public string displayName;
-    public float weight;
     public HullType hullType;
 
     public virtual void OnEquip(Ship ship)

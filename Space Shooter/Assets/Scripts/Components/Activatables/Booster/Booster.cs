@@ -6,17 +6,9 @@ using UnityEngine;
 public class Booster : Activatable
 {
     public float speedMod = 1.5f;
-    public float duration = 3f;
 
     public override Activation GetActivation(Ship ship)
     {
-        return new Activation(ship, cooldown, (s) => { ship.StartCoroutine(Boost(ship)); });
-    }
-
-    IEnumerator Boost(Ship ship)
-    {
-        ship.entity.AddSpeedMod(speedMod);
-        yield return new WaitForSeconds(duration);
-        ship.entity.RemoveSpeedMod(speedMod);
+        return new Activation(cooldown, () => { ship.entity.AddSpeedMod(speedMod); }, () => { ship.entity.RemoveSpeedMod(speedMod); });
     }
 }

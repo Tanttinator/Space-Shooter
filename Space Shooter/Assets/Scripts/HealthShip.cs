@@ -11,7 +11,7 @@ public class HealthShip : Health
     {
         get
         {
-            return ship.hull != null ? ship.hull.maxHealth : 100f;
+            return ship.maxHealth;
         }
     }
 

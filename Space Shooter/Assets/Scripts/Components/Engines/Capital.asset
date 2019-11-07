@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58a1b11bb9b81b40916846af4638a74, type: 3}
   m_Name: Capital
   m_EditorClassIdentifier: 
-  displayName: Capital Ship Engines
+  name: Capital Engine
   weight: 10
   hullType: 0
   speed: 10

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58a1b11bb9b81b40916846af4638a74, type: 3}
   m_Name: Medium
   m_EditorClassIdentifier: 
-  displayName: Medium Engines
+  name: Medium Engine
   weight: 5
+  hullType: 0
   speed: 7
   turnSpeed: 8

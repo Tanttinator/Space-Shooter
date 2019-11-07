@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739399a8aa6a1094f90a7c339e6702d1, type: 3}
   m_Name: LaserMedium
   m_EditorClassIdentifier: 
-  displayName: Medium Laser
+  name: Medium Lazer
   weight: 10
   hullType: 0
   cooldown: 0.5

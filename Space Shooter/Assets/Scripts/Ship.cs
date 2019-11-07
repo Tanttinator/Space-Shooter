@@ -5,10 +5,17 @@ using UnityEngine;
 [RequireComponent(typeof(EntityShip), typeof(HealthShip))]
 public class Ship : MonoBehaviour
 {
-    public Hull hull;
+    [Header("Ship stats")]
+    new public string name;
+    public float maxHealth;
+    public float cargoSpace;
+    [SerializeField] float weight;
+
     public Engine engine;
     public Cannon cannon;
     public Shield shield;
+    public Plating plating;
+    public Generator generator;
 
     [SerializeField] Activatable[] activatablesList;
     public Activatable[] Activatables
@@ -46,7 +53,7 @@ public class Ship : MonoBehaviour
                 if (a != null)
                     activatablesWeight += a.weight;
             }
-            return (hull != null ? hull.weight : 20) + (engine != null ? engine.weight : 3) + (cannon != null ? cannon.weight : 5) + (shield != null ? shield.weight : 5) + activatablesWeight;
+            return weight + (engine != null ? engine.weight : 3) + (cannon != null ? cannon.weight : 5) + (shield != null ? shield.weight : 5) + (plating != null ? plating.weight : 20) + (generator != null ? generator.weight : 5) + activatablesWeight;
         }
     }
 
@@ -61,6 +68,17 @@ public class Ship : MonoBehaviour
         activations[index]?.Activate();
     }
 
+    public void Deactivate(int index)
+    {
+        if (index >= activations.Length || index < 0)
+            return;
+
+        if (activations[index] == null)
+            activations[index] = Activatables[index]?.GetActivation(this);
+
+        activations[index]?.Deactivate();
+    }
+
     private void Awake()
     {
         entity = GetComponent<EntityShip>();
@@ -69,7 +87,7 @@ public class Ship : MonoBehaviour
         activations = new Activation[Activatables.Length];
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         foreach (Activation a in activations)
             a?.Update(Time.deltaTime);

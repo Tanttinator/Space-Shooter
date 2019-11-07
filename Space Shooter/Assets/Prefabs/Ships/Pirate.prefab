@@ -30,36 +30,6 @@ Transform:
   m_Father: {fileID: 4450653336533742068}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6118650567804880901
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6665230475766384872}
-  m_Layer: 8
-  m_Name: Cannon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6665230475766384872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6118650567804880901}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.329, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4450653336533742068}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &8549812610581518149
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -91,6 +61,36 @@ MonoBehaviour:
   cannons:
   - {fileID: 1683848503911206182}
   - {fileID: 6665230475766384872}
+--- !u!1 &6118650567804880901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6665230475766384872}
+  m_Layer: 8
+  m_Name: Cannon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6665230475766384872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118650567804880901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.329, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4450653336533742068}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8357201821143161253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,6 +103,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate
       objectReference: {fileID: 0}
+    - target: {fileID: 853450644696083476, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: faction
+      value: 
+      objectReference: {fileID: 11400000, guid: f0b8f53a0f8fc5a4aabd603ec20d823e,
+        type: 2}
+    - target: {fileID: 853450644696083476, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: loot
+      value: 
+      objectReference: {fileID: 11400000, guid: 845ab08de24d32e418324afed9a49c18,
+        type: 2}
     - target: {fileID: 5636636903080749137, guid: dc54f1e63825a014db7fed97196ad052,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -158,18 +170,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 853450644696083476, guid: dc54f1e63825a014db7fed97196ad052,
-        type: 3}
-      propertyPath: faction
-      value: 
-      objectReference: {fileID: 11400000, guid: f0b8f53a0f8fc5a4aabd603ec20d823e,
-        type: 2}
-    - target: {fileID: 853450644696083476, guid: dc54f1e63825a014db7fed97196ad052,
-        type: 3}
-      propertyPath: loot
-      value: 
-      objectReference: {fileID: 11400000, guid: 845ab08de24d32e418324afed9a49c18,
-        type: 2}
     - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
         type: 3}
       propertyPath: hull
@@ -194,6 +194,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 1c5441415488d9a4e880cee4ec98ae51,
         type: 2}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: name
+      value: Pirate Fighter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: cargoSpace
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: weight
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc54f1e63825a014db7fed97196ad052, type: 3}
 --- !u!1 &2564643969008409493 stripped

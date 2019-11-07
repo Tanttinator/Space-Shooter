@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14bd5c3cad5ec6d46a222d998a65edc8, type: 3}
   m_Name: Pirate
   m_EditorClassIdentifier: 
-  displayName: Pirate Spawner
+  name: Pirate Spawner
   weight: 10
   hullType: 3
   cooldown: 30

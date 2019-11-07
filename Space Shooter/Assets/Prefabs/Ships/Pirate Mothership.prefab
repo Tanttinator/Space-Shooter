@@ -28,35 +28,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate Mothership
       objectReference: {fileID: 0}
-    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+    - target: {fileID: 853450644696083476, guid: dc54f1e63825a014db7fed97196ad052,
         type: 3}
-      propertyPath: activatablesList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
-        type: 3}
-      propertyPath: hull
+      propertyPath: faction
       value: 
-      objectReference: {fileID: 11400000, guid: 78977b985e6f0164c9aab5d7bf0c4811,
+      objectReference: {fileID: 11400000, guid: f0b8f53a0f8fc5a4aabd603ec20d823e,
         type: 2}
-    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+    - target: {fileID: 853450644696083476, guid: dc54f1e63825a014db7fed97196ad052,
         type: 3}
-      propertyPath: engine
+      propertyPath: loot
       value: 
-      objectReference: {fileID: 11400000, guid: 59c4cfc906b03484294a7a1ff0f69c35,
+      objectReference: {fileID: 11400000, guid: a0a079657103db64ab198d860d3572cc,
         type: 2}
-    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+    - target: {fileID: 4307860362572277447, guid: dc54f1e63825a014db7fed97196ad052,
         type: 3}
-      propertyPath: shield
+      propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 11400000, guid: f8370a5e1156d1947866a673a14b724c,
-        type: 2}
-    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+      objectReference: {fileID: 21300000, guid: e79f7152f40f3e641a9225a06f7626ae,
         type: 3}
-      propertyPath: activatablesList.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: e00be5e689ba0e34fab80fc1123fc7cf,
-        type: 2}
     - target: {fileID: 5636636903080749137, guid: dc54f1e63825a014db7fed97196ad052,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -112,24 +101,55 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4307860362572277447, guid: dc54f1e63825a014db7fed97196ad052,
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
         type: 3}
-      propertyPath: m_Sprite
+      propertyPath: activatablesList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: hull
       value: 
-      objectReference: {fileID: 21300000, guid: e79f7152f40f3e641a9225a06f7626ae,
-        type: 3}
-    - target: {fileID: 853450644696083476, guid: dc54f1e63825a014db7fed97196ad052,
-        type: 3}
-      propertyPath: faction
-      value: 
-      objectReference: {fileID: 11400000, guid: f0b8f53a0f8fc5a4aabd603ec20d823e,
+      objectReference: {fileID: 11400000, guid: 78977b985e6f0164c9aab5d7bf0c4811,
         type: 2}
-    - target: {fileID: 853450644696083476, guid: dc54f1e63825a014db7fed97196ad052,
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
         type: 3}
-      propertyPath: loot
+      propertyPath: engine
       value: 
-      objectReference: {fileID: 11400000, guid: a0a079657103db64ab198d860d3572cc,
+      objectReference: {fileID: 11400000, guid: 59c4cfc906b03484294a7a1ff0f69c35,
         type: 2}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: shield
+      value: 
+      objectReference: {fileID: 11400000, guid: f8370a5e1156d1947866a673a14b724c,
+        type: 2}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: activatablesList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e00be5e689ba0e34fab80fc1123fc7cf,
+        type: 2}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: name
+      value: Pirate Mothership
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: cargoSpace
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389569802397636568, guid: dc54f1e63825a014db7fed97196ad052,
+        type: 3}
+      propertyPath: weight
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc54f1e63825a014db7fed97196ad052, type: 3}
 --- !u!1 &6294631607453418327 stripped

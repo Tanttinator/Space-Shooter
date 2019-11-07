@@ -179,6 +179,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2354a9da98ef6c947be113287c3de8aa,
         type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: plating
+      value: 
+      objectReference: {fileID: 11400000, guid: 4860008455c6c8b48b52f5910874d8e8,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: generator
+      value: 
+      objectReference: {fileID: 11400000, guid: a688f340ee29f5348abb7782da33757b,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: cargoSpace
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: weight
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8727725559771215218, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
         type: 3}
       propertyPath: m_LocalPosition.x

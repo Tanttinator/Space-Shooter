@@ -9,6 +9,6 @@ public class Spawner : Activatable
 
     public override Activation GetActivation(Ship ship)
     {
-        return new Activation(ship, cooldown, (s) => { Instantiate(this.ship, ship.transform.position, ship.transform.rotation); });
+        return new Activation(cooldown, () => { Instantiate(this.ship, ship.transform.position, ship.transform.rotation); });
     }
 }

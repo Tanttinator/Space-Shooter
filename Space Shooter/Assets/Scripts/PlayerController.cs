@@ -21,9 +21,13 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
             ship.Activate(0);
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.Space))
+            ship.Deactivate(0);
+        if (Input.GetKeyDown(KeyCode.LeftShift))
             ship.Activate(1);
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+            ship.Deactivate(1);
     }
 }

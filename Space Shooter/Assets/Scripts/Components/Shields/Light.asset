@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a42edeba5ccd324aab5815587a40c75, type: 3}
   m_Name: Light
   m_EditorClassIdentifier: 
-  displayName: Light Shields
+  name: Light Shields
   weight: 5
   hullType: 0
   maxCapacity: 50

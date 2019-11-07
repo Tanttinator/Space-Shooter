@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a42edeba5ccd324aab5815587a40c75, type: 3}
   m_Name: Capital
   m_EditorClassIdentifier: 
-  displayName: Capital Ship Shields
+  name: Capital Shields
   weight: 20
   hullType: 0
   maxCapacity: 200
