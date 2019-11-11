@@ -21,7 +21,7 @@ public class CameraFollow : MonoBehaviour
         isFollowing = false;
     }
 
-    void Update()
+    void LateUpdate()
     {
         if(isFollowing)
         {
