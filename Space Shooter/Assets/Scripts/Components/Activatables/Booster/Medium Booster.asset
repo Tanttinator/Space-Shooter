@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Medium Booster
   m_EditorClassIdentifier: 
   name: Medium Booster
-  weight: 5
+  weight: 4
+  icon: {fileID: 0}
   hullType: 1
   cooldown: 0
+  energyCost: 0
+  energyPerSecond: 15
   speedMod: 3

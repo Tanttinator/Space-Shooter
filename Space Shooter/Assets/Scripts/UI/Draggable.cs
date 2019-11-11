@@ -7,16 +7,18 @@ public class Draggable : UIElement, IBeginDragHandler, IDragHandler, IEndDragHan
 {
     Vector2 dragOffset = new Vector2(0, 0);
 
-    RectTransform rt;
+    protected RectTransform dragObject;
 
     protected virtual void OnDragStart(Vector2 mousePosition)
     {
-        dragOffset = rt.anchoredPosition - mousePosition;
+        dragObject = GetComponent<RectTransform>();
+        dragObject.anchorMin = dragObject.anchorMax = new Vector2(0, 0);
+        dragOffset = dragObject.anchoredPosition - mousePosition;
     }
 
     protected virtual void OnDragUpdate(Vector2 mousePosition)
     {
-        rt.anchoredPosition = mousePosition + dragOffset;
+        dragObject.anchoredPosition = mousePosition + dragOffset;
     }
 
     protected virtual void OnDragEnd(Vector2 mousePosition)
@@ -31,8 +33,6 @@ public class Draggable : UIElement, IBeginDragHandler, IDragHandler, IEndDragHan
 
     protected override void Start()
     {
-        rt = GetComponent<RectTransform>();
-        rt.anchorMin = rt.anchorMax = new Vector2(0, 0);
         base.Start();
     }
 

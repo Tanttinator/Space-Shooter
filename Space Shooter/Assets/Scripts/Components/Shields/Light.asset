@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Light
   m_EditorClassIdentifier: 
   name: Light Shields
-  weight: 5
+  weight: 2
+  icon: {fileID: 0}
   hullType: 0
   maxCapacity: 50
   chargeRate: 5

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Medium
   m_EditorClassIdentifier: 
   name: Medium Engine
-  weight: 5
+  weight: 6
+  icon: {fileID: 0}
   hullType: 0
-  speed: 7
-  turnSpeed: 8
+  speed: 10
+  turnSpeed: 16

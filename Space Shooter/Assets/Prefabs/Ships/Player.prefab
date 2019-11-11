@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a822268bf391df3459425c8062a02b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  credits: 0
 --- !u!1001 &1691083676670244029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,10 +150,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
         type: 3}
+      propertyPath: components.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
       propertyPath: hull
       value: 
-      objectReference: {fileID: 11400000, guid: 0dc0f86bb72a8494c9bc3a68fe5bb669,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
         type: 3}
       propertyPath: engine
@@ -199,13 +202,49 @@ PrefabInstance:
     - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
         type: 3}
       propertyPath: cargoSpace
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
         type: 3}
       propertyPath: weight
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: components.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 909b807dd82726945919ddc68a1c10f9,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: components.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f6757fe694dee854194c24a351d2d810,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: components.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 95003cae935252547a77d919f91537ab,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: components.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4860008455c6c8b48b52f5910874d8e8,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: components.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: a688f340ee29f5348abb7782da33757b,
+        type: 2}
+    - target: {fileID: 4849244338393156347, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
+        type: 3}
+      propertyPath: components.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2354a9da98ef6c947be113287c3de8aa,
+        type: 2}
     - target: {fileID: 8727725559771215218, guid: 6ea9535b4dcb4d44aaabef2271fe01a1,
         type: 3}
       propertyPath: m_LocalPosition.x

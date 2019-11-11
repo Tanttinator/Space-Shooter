@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: LaserMedium
   m_EditorClassIdentifier: 
   name: Medium Lazer
-  weight: 10
+  weight: 4
+  icon: {fileID: 0}
   hullType: 0
   cooldown: 0.5
+  energyCost: 0
+  energyPerSecond: 0
   damage: 30
   sound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
   prefab: {fileID: 1214123937749718154, guid: e0e2a6016b73690438edb8ada54c0abb, type: 3}

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Small Booster
   m_EditorClassIdentifier: 
   name: Light Booster
-  weight: 3
+  weight: 2
+  icon: {fileID: 0}
   hullType: 0
   cooldown: 0
+  energyCost: 0
+  energyPerSecond: 10
   speedMod: 2

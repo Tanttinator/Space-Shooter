@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Light Engine
   weight: 3
+  icon: {fileID: 0}
   hullType: 0
-  speed: 5
-  turnSpeed: 10
+  speed: 8
+  turnSpeed: 14

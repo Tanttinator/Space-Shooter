@@ -24,6 +24,6 @@ public class Cannon : Activatable
 
     public override Activation GetActivation(Ship ship)
     {
-        return new Activation(cooldown, null, null, () => { ship.weapons?.Shoot(); });
+        return new Activation(ship, cooldown, energyCost, energyPerSecond, null, null, () => { ship.weapons?.Shoot(); });
     }
 }

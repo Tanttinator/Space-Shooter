@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Light Generator
   m_EditorClassIdentifier: 
   name: Light Generator
-  weight: 5
+  weight: 2
+  icon: {fileID: 0}
   hullType: 0
-  maxCapacity: 20
+  maxCapacity: 40
   chargeRate: 1

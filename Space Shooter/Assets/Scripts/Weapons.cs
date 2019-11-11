@@ -11,7 +11,7 @@ public class Weapons : MonoBehaviour
 
     public void Shoot()
     {
-        ship.cannon.Shoot(cannons[cannonId], ship.health.faction);
+        ship.Cannon.Shoot(cannons[cannonId], ship.health.faction);
         if (cannonId == cannons.Count - 1)
             cannonId = 0;
         else

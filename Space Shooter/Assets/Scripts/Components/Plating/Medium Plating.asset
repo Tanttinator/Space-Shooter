@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Medium Plating
   m_EditorClassIdentifier: 
   name: Medium Plating
-  weight: 20
+  weight: 12
+  icon: {fileID: 0}
   hullType: 0
-  damageMod: 0.2
+  damageMod: 0.15

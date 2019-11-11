@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: LaserLight
   m_EditorClassIdentifier: 
   name: Light Lazer
-  weight: 5
+  weight: 2
+  icon: {fileID: 0}
   hullType: 0
   cooldown: 0.3
+  energyCost: 0
+  energyPerSecond: 0
   damage: 15
   sound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
   prefab: {fileID: 827494194157081251, guid: 6edbbd263aa72e04d91d35301833414b, type: 3}

@@ -9,6 +9,6 @@ public class Booster : Activatable
 
     public override Activation GetActivation(Ship ship)
     {
-        return new Activation(cooldown, () => { ship.entity.AddSpeedMod(speedMod); }, () => { ship.entity.RemoveSpeedMod(speedMod); });
+        return new Activation(ship, cooldown, energyCost, energyPerSecond, () => { ship.entity.AddSpeedMod(speedMod); }, () => { ship.entity.RemoveSpeedMod(speedMod); });
     }
 }

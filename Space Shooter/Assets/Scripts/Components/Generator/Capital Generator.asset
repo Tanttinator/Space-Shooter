@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Capital Generator
   m_EditorClassIdentifier: 
   name: Capital Generator
-  weight: 15
+  weight: 16
+  icon: {fileID: 0}
   hullType: 3
-  maxCapacity: 100
+  maxCapacity: 320
   chargeRate: 8

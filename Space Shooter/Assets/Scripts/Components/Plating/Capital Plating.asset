@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Capital Plating
   m_EditorClassIdentifier: 
   name: Capital Plating
-  weight: 40
+  weight: 48
+  icon: {fileID: 0}
   hullType: 3
   damageMod: 0.3

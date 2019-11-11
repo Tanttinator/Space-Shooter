@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Capital
   m_EditorClassIdentifier: 
   name: Capital Shields
-  weight: 20
+  weight: 16
+  icon: {fileID: 0}
   hullType: 0
-  maxCapacity: 200
+  maxCapacity: 400
   chargeRate: 5
   damageMod: 0.6
-  chargeStartDelay: 20
+  chargeStartDelay: 40

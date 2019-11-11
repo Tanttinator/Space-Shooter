@@ -29,5 +29,9 @@ public class PlayerController : MonoBehaviour
             ship.Activate(1);
         if (Input.GetKeyUp(KeyCode.LeftShift))
             ship.Deactivate(1);
+        if (Input.GetKeyDown(KeyCode.C))
+            FindObjectOfType<ComponentsWindow>().Show(ship);
+        if (Input.GetKeyDown(KeyCode.I))
+            FindObjectOfType<CargoWindow>().Show(ship.inventory);
     }
 }

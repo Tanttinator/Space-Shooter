@@ -12,6 +12,7 @@ public class PlayerHandler : MonoBehaviour
     public GameObjectEvent onSpawnPlayer;
     public FloatFloatEvent onPlayerHealthChanged;
     public FloatFloatEvent onPlayerShieldChanged;
+    public FloatFloatEvent onPlayerEnergyChanged;
 
     public static Ship playerShip;
 
@@ -22,6 +23,7 @@ public class PlayerHandler : MonoBehaviour
 
         playerShip.health.onHealthChanged += OnHealthChanged;
         playerShip.health.onShieldCapacityChanged += OnShieldChanged;
+        playerShip.onEnergyChanged += OnEnergyChanged;
 
         onSpawnPlayer?.Invoke(obj);
     }
@@ -34,6 +36,11 @@ public class PlayerHandler : MonoBehaviour
     void OnShieldChanged(float capacity, float maxCapacity)
     {
         onPlayerShieldChanged?.Invoke(capacity, maxCapacity);
+    }
+
+    void OnEnergyChanged(float capacity, float maxCapacity)
+    {
+        onPlayerEnergyChanged?.Invoke(capacity, maxCapacity);
     }
 
     private void Start()

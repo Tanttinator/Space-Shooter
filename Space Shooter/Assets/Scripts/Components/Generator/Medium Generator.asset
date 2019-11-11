@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Medium Generator
   m_EditorClassIdentifier: 
   name: Medium Generator
-  weight: 8
+  weight: 4
+  icon: {fileID: 0}
   hullType: 1
-  maxCapacity: 50
-  chargeRate: 3
+  maxCapacity: 80
+  chargeRate: 2

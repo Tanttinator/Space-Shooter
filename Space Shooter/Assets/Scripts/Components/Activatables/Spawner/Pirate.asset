@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Pirate Spawner
   weight: 10
+  icon: {fileID: 0}
   hullType: 3
   cooldown: 30
+  energyCost: 100
+  energyPerSecond: 0
   ship: {fileID: 2564643969008409493, guid: 5d02066c8aae1ae4aaaa4486900387b2, type: 3}

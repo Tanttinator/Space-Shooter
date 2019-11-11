@@ -10,14 +10,14 @@ public class EntityShip : Entity
     {
         get
         {
-            return (ship.engine != null ? ship.engine.speed : 0f) * speedMod * 25 / ship.Weight;
+            return (ship.Engine != null ? ship.Engine.speed : 0f) * speedMod * 25 / ship.Weight;
         }
     }
     protected override float TurnSpeed
     {
         get
         {
-            return (ship.engine != null ? ship.engine.turnSpeed : 0f) * 300 / ship.Weight;
+            return (ship.Engine != null ? ship.Engine.turnSpeed : 0f) * 300 / ship.Weight;
         }
     }
 

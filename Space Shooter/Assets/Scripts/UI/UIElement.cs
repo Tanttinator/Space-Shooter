@@ -2,26 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class UIElement : MonoBehaviour
+public class UIElement : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
     public bool startHidden = false;
 
-    public void Show()
+    public static List<UIElement> mouseOver = new List<UIElement>();
+
+    protected bool isShown = true;
+
+    public virtual void Show(params System.Object[] args)
     {
+        if (isShown)
+            return;
+        isShown = true;
         transform.localScale = new Vector3(1f, 1f, 1f);
-        OnShow();
     }
 
-    public void Hide()
+    public virtual void Hide()
     {
+        if (!isShown)
+            return;
+        isShown = false;
         transform.localScale = new Vector3(0f, 0f, 0f);
-    }
-
-    protected virtual void OnShow()
-    {
-
     }
 
     // Start is called before the first frame update
@@ -34,5 +39,15 @@ public class UIElement : MonoBehaviour
     protected virtual void Update()
     {
 
+    }
+
+    public virtual void OnPointerEnter(PointerEventData eventData)
+    {
+        mouseOver.Add(this);
+    }
+
+    public virtual void OnPointerExit(PointerEventData eventData)
+    {
+        mouseOver.Remove(this);
     }
 }

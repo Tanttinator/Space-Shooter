@@ -6,7 +6,7 @@ using System;
 [RequireComponent(typeof(Ship))]
 public class Inventory : MonoBehaviour
 {
-    public int credits = 0;
+    public int credits { get; protected set; }
 
     public float MaxCargoSpace
     {
@@ -32,6 +32,17 @@ public class Inventory : MonoBehaviour
 
     public Action<Item, int> onItemAdded;
     public Action<Item, int> onItemRemoved;
+    public Action<int> onCreditsChanged;
+    public Action<float, float> onCargoSpaceChanged;
+
+    public bool ChangeCredits(int amount)
+    {
+        if (credits + amount < 0)
+            return false;
+        credits += amount;
+        onCreditsChanged?.Invoke(credits);
+        return true;
+    }
 
     public bool AddItem(Item item)
     {
@@ -43,6 +54,7 @@ public class Inventory : MonoBehaviour
             else
                 inventory.Add(new ItemStack(item));
             onItemAdded?.Invoke(item, AmountOf(item));
+            onCargoSpaceChanged?.Invoke(CargoSpace, MaxCargoSpace);
             return true;
         }
         else
@@ -61,6 +73,7 @@ public class Inventory : MonoBehaviour
             {
                 inventory[index].count--;
                 onItemRemoved?.Invoke(item, AmountOf(item));
+                onCargoSpaceChanged?.Invoke(CargoSpace, MaxCargoSpace);
                 success = true;
             }
             if (inventory[index].count == 0)
@@ -76,7 +89,7 @@ public class Inventory : MonoBehaviour
             if (inventory[i].item == item)
                 return i;
         }
-        return 0;
+        return -1;
     }
 
     public int AmountOf(Item item)
@@ -89,9 +102,20 @@ public class Inventory : MonoBehaviour
         return -1;
     }
 
+    public List<ItemStack> GetInventory()
+    {
+        return inventory;
+    }
+
+    public float SpaceLeft()
+    {
+        return MaxCargoSpace - CargoSpace;
+    }
+
     private void Awake()
     {
         ship = GetComponent<Ship>();
+        credits = 0;
     }
 }
 

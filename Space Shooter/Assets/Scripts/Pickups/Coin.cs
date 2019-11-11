@@ -12,7 +12,7 @@ public class Coin : Pickup
         Inventory inv = obj.GetComponent<Inventory>();
         if (inv != null)
         {
-            inv.credits += Random.Range(minValue, maxValue);
+            inv.ChangeCredits(Random.Range(minValue, maxValue));
         }
     }
 }

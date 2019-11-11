@@ -19,28 +19,28 @@ public class HealthShip : Health
     {
         get
         {
-            return ship.shield != null ? ship.shield.maxCapacity : 0f;
+            return ship.Shields != null ? ship.Shields.maxCapacity : 0f;
         }
     }
     float ChargeRate
     {
         get
         {
-            return ship.shield != null ? ship.shield.chargeRate : 0f;
+            return ship.Shields != null ? ship.Shields.chargeRate : 0f;
         }
     }
     float DamageMod
     {
         get
         {
-            return ship.shield != null ? ship.shield.damageMod : 1f;
+            return ship.Shields != null ? ship.Shields.damageMod : 1f;
         }
     }
     float ChargeStartDelay
     {
         get
         {
-            return ship.shield != null ? ship.shield.chargeStartDelay : 0f;
+            return ship.Shields != null ? ship.Shields.chargeStartDelay : 0f;
         }
     }
     float capacity = 0f;

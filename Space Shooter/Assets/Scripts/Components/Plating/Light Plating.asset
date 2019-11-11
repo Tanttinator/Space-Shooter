@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Light Plating
   m_EditorClassIdentifier: 
   name: Light Plating
-  weight: 10
+  weight: 6
+  icon: {fileID: 0}
   hullType: 0
   damageMod: 0.1
