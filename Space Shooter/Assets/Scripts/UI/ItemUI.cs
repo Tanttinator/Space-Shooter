@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemUI : ItemDraggable
+public class ItemUI : ItemDragStart
 {
     [SerializeField] Image icon;
     [SerializeField] new Text name;

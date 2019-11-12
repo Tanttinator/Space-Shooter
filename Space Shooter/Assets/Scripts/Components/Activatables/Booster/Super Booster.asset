@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b6dd4155fb4bc64aac34b4516a7f200, type: 3}
-  m_Name: Medium Booster
+  m_Name: Super Booster
   m_EditorClassIdentifier: 
-  name: Medium Booster
+  name: Super Booster
   weight: 4
+  value: 0
   icon: {fileID: 0}
   hullType: 1
   cooldown: 0
   energyCost: 0
-  energyPerSecond: 15
-  speedMod: 3
+  energyPerSecond: 1
+  speedMod: 10

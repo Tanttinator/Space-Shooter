@@ -14,9 +14,9 @@ public class CargoWindow : Window
             return;
         }
 
+        base.Show(args);
         inventory.SetInventory(args[0] as Inventory);
 
-        base.Show(args);
     }
 
     public override void Hide()

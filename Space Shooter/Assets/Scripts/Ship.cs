@@ -155,8 +155,11 @@ public class Ship : MonoBehaviour
     {
         if(CanSetComponent(component, slot))
         {
-            if(components[slot] != null)
+            if (components[slot] != null)
+            {
                 inventory.AddItem(components[slot]);
+                RemoveComponent(slot);
+            }
             components[slot] = component;
             onComponentSet(component, slot);
             return true;
@@ -166,6 +169,10 @@ public class Ship : MonoBehaviour
 
     public void RemoveComponent(int slot)
     {
+        if (slot == 1)
+            activations[0] = null;
+        else if (slot > 4)
+            activations[slot - 4] = null;
         components[slot] = null;
         onComponentRemoved?.Invoke(slot);
     }

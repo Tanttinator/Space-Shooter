@@ -30,6 +30,7 @@ public class ComponentsWindow : Window
         ship.onComponentSet += OnComponentSet;
         ship.onComponentRemoved += OnComponentRemoved;
 
+        base.Show(args);
         for (int i = 0; i < ship.Activatables.Length - 1; i++)
         {
             GameObject go = Instantiate(activatableSlotGO);
@@ -45,7 +46,6 @@ public class ComponentsWindow : Window
             if(ship.components[i] != null)
                 slots[i].SetItem(ship.components[i]);
         }
-        base.Show(args);
     }
 
     public override void Hide()

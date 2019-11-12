@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class Slot : ItemDraggable, IItemContainer
+public class Slot : ItemDragStart, IItemContainer
 {
     public Image image;
     public Sprite defaultIcon;
@@ -38,7 +38,7 @@ public class Slot : ItemDraggable, IItemContainer
             image.sprite = defaultIcon;
     }
 
-    public bool OnItemDropped(Item item)
+    public bool OnItemDropped(Item item, IItemContainer origin)
     {
         if (onItemDropped == null)
             return false;
@@ -46,8 +46,14 @@ public class Slot : ItemDraggable, IItemContainer
             return onItemDropped.Invoke(item);
     }
 
-    public void OnItemDragged(Item item)
+    public bool OnItemDragged(Item item)
     {
         onItemDragged?.Invoke(item);
+        return true;
+    }
+
+    public void OnDropFailed(Item item)
+    {
+        onItemDropped?.Invoke(item);
     }
 }

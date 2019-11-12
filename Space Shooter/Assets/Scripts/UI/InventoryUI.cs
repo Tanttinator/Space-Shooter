@@ -56,6 +56,7 @@ public class InventoryUI : UIElement, IItemContainer
 
     public void SetInventory(Inventory inventory)
     {
+        ResetInventory();
         this.inventory = inventory;
         foreach (ItemStack stack in inventory.GetInventory())
             AddItem(stack.item, stack.count);
@@ -69,8 +70,8 @@ public class InventoryUI : UIElement, IItemContainer
 
     public void ResetInventory()
     {
-        foreach (Item item in itemGOs.Keys)
-            Destroy(itemGOs[item]);
+        Debug.Log("ResetInventory");
+        scrollView.Clear();
         itemGOs.Clear();
         if (inventory == null)
             return;
@@ -81,13 +82,19 @@ public class InventoryUI : UIElement, IItemContainer
         inventory = null;
     }
 
-    public bool OnItemDropped(Item item)
+    public bool OnItemDropped(Item item, IItemContainer origin)
     {
         return inventory.AddItem(item);
     }
 
-    public void OnItemDragged(Item item)
+    public bool OnItemDragged(Item item)
     {
         inventory.RemoveItem(item);
+        return true;
+    }
+
+    public void OnDropFailed(Item item)
+    {
+        inventory.AddItem(item);
     }
 }

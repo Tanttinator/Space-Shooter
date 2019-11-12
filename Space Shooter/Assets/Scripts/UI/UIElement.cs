@@ -10,6 +10,13 @@ public class UIElement : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public bool startHidden = false;
 
     public static List<UIElement> mouseOver = new List<UIElement>();
+    public bool isMouseOver
+    {
+        get
+        {
+            return mouseOver.Count > 0 && mouseOver[0] == this;
+        }
+    }
 
     protected bool isShown = true;
 
@@ -43,7 +50,7 @@ public class UIElement : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
-        mouseOver.Add(this);
+        mouseOver.Insert(0, this);
     }
 
     public virtual void OnPointerExit(PointerEventData eventData)

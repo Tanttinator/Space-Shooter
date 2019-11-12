@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IItemContainer
 {
-    bool OnItemDropped(Item item);
-    void OnItemDragged(Item item);
+    bool OnItemDropped(Item item, IItemContainer origin);
+    bool OnItemDragged(Item item);
+    void OnDropFailed(Item item);
 }

@@ -28,7 +28,7 @@ public class BackgroundScroller : MonoBehaviour
     //Scroll one texture depending on our parents position
     void Scroll(Material mat, int parallax)
     {
-        mat.mainTextureOffset = transform.position / parallax;
+        mat.mainTextureOffset = transform.position / parallax * 0.1f;
     }
 
     //Set background alphas and render positions
