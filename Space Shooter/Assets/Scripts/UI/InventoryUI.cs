@@ -70,7 +70,6 @@ public class InventoryUI : UIElement, IItemContainer
 
     public void ResetInventory()
     {
-        Debug.Log("ResetInventory");
         scrollView.Clear();
         itemGOs.Clear();
         if (inventory == null)

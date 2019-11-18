@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Healthpack : Pickup
 {
-    public int amount = 25;
+    [HideInInspector] public int amount = 25;
 
     protected override void OnPickup(GameObject obj)
     {

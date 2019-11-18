@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Coin : Pickup
 {
-    public int minValue = 1;
-    public int maxValue = 3;
+    [HideInInspector] public int minValue = 1;
+    [HideInInspector] public int maxValue = 3;
 
     protected override void OnPickup(GameObject obj)
     {

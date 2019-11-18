@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8558c78189bf941a247fd155715feb, type: 3}
   m_Name: Light Plating
   m_EditorClassIdentifier: 
+  go: {fileID: 6364609498925030295, guid: 6fc0013d46e8f664595ed3fa604fd2ef, type: 3}
   name: Light Plating
   weight: 6
+  value: 0
   icon: {fileID: 0}
   hullType: 0
   damageMod: 0.1

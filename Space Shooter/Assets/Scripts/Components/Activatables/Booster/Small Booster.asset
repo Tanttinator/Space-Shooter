@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6dd4155fb4bc64aac34b4516a7f200, type: 3}
   m_Name: Small Booster
   m_EditorClassIdentifier: 
+  go: {fileID: 6364609498925030295, guid: 6fc0013d46e8f664595ed3fa604fd2ef, type: 3}
   name: Light Booster
   weight: 2
+  value: 0
   icon: {fileID: 0}
   hullType: 0
   cooldown: 0

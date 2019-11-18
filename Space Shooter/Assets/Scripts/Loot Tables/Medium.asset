@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Medium
   m_EditorClassIdentifier: 
   loot:
-  - item: {fileID: 6962088335230138915, guid: e055a911632e2f24fbeb17ffdc221c15, type: 3}
+  - item: {fileID: 11400000, guid: 318701330275e944c878f9c9412e146b, type: 2}
     chance: 2
-  - item: {fileID: 2258221000940233853, guid: 7b09cba04007668409cc084f172801ed, type: 3}
+    guaranteed: 0
+  - item: {fileID: 11400000, guid: 5045d9306edf9b049a77b2755001c9b8, type: 2}
     chance: 1
+    guaranteed: 0

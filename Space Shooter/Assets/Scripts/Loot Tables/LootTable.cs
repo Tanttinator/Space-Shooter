@@ -8,9 +8,9 @@ public class LootTable : ScriptableObject
 {
     public List<LootItem> loot;
 
-    public List<GameObject> GetItems()
+    public List<Droppable> GetItems()
     {
-        List<GameObject> items = new List<GameObject>();
+        List<Droppable> items = new List<Droppable>();
         int total = 0;
 
         foreach(LootItem item in loot)
@@ -31,14 +31,14 @@ public class LootTable : ScriptableObject
 
     public void Drop(Vector2 position)
     {
-        foreach (GameObject item in GetItems())
-            Instantiate(item, position + Random.insideUnitCircle * 3f, Quaternion.identity);
+        foreach (Droppable item in GetItems())
+            item.Drop(position);
     }
 
     [System.Serializable]
     public struct LootItem
     {
-        public GameObject item;
+        public Droppable item;
         public int chance;
         public int guaranteed;
     }

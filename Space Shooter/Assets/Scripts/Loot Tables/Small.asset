@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Small
   m_EditorClassIdentifier: 
   loot:
-  - item: {fileID: 9178967440238106903, guid: 20027be8eca7d6b41bf9e3b6157fe2d9, type: 3}
+  - item: {fileID: 11400000, guid: bc4de8f6f91622c46a8aaa33ea3d67da, type: 2}
     chance: 2
-  - item: {fileID: 6632270840339395910, guid: 6157b524ca1fdbe4aba00d9ce9f7f3c0, type: 3}
+    guaranteed: 0
+  - item: {fileID: 11400000, guid: 487b9c57d8fa1c14ea9fa6acb3f39c71, type: 2}
     chance: 1
+    guaranteed: 0
