@@ -27,7 +27,7 @@ public class ItemDragStart : UIElement, IBeginDragHandler, IDragHandler, IEndDra
         if (draggedItem.icon != null)
             currGo.GetComponent<Image>().sprite = draggedItem.icon;
         currGo.transform.SetParent(HUD.hudParent);
-        currGo.GetComponent<ItemDraggable>().item = draggedItem;
+        currGo.GetComponent<ItemDraggable>().SetItem(draggedItem);
         currGo.GetComponent<ItemDraggable>().origin = Origin;
     }
 

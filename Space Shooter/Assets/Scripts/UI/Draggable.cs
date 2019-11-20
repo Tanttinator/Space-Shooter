@@ -44,6 +44,7 @@ public class Draggable : UIElement
         {
             if(Input.GetMouseButtonDown(0) && isMouseOver)
             {
+                Focus();
                 OnDragStart(Input.mousePosition);
             }
         }
@@ -53,20 +54,5 @@ public class Draggable : UIElement
     protected override void Start()
     {
         base.Start();
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        OnDragStart(eventData.position);
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        OnDragUpdate(eventData.position);
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        OnDragEnd(eventData.position);
     }
 }

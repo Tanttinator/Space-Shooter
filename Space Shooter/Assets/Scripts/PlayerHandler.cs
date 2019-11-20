@@ -16,6 +16,8 @@ public class PlayerHandler : MonoBehaviour
 
     public static Ship playerShip;
 
+    public Cannon debugCannon;
+
     void SpawnPlayer()
     {
         GameObject obj = Instantiate(player, spawnPoint, Quaternion.identity);
@@ -24,6 +26,8 @@ public class PlayerHandler : MonoBehaviour
         playerShip.health.onHealthChanged += OnHealthChanged;
         playerShip.health.onShieldCapacityChanged += OnShieldChanged;
         playerShip.onEnergyChanged += OnEnergyChanged;
+
+        playerShip.inventory.AddItem(debugCannon);
 
         onSpawnPlayer?.Invoke(obj);
     }

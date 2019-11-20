@@ -16,7 +16,7 @@ MonoBehaviour:
   name: Capital Shields
   weight: 16
   value: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: e253a1c4b3df20047a30ba73c0a85a4c, type: 3}
   hullType: 0
   maxCapacity: 400
   chargeRate: 5

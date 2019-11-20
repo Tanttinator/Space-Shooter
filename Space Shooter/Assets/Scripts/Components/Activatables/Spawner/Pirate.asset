@@ -16,7 +16,7 @@ MonoBehaviour:
   name: Pirate Spawner
   weight: 10
   value: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: e253a1c4b3df20047a30ba73c0a85a4c, type: 3}
   hullType: 3
   cooldown: 30
   energyCost: 100

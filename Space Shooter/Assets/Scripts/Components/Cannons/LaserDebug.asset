@@ -9,16 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a42edeba5ccd324aab5815587a40c75, type: 3}
-  m_Name: Light
+  m_Script: {fileID: 11500000, guid: 739399a8aa6a1094f90a7c339e6702d1, type: 3}
+  m_Name: LaserDebug
   m_EditorClassIdentifier: 
   go: {fileID: 6364609498925030295, guid: 6fc0013d46e8f664595ed3fa604fd2ef, type: 3}
-  name: Light Shields
-  weight: 2
+  name: Godray
+  weight: 0
   value: 0
   icon: {fileID: 21300000, guid: e253a1c4b3df20047a30ba73c0a85a4c, type: 3}
   hullType: 0
-  maxCapacity: 50
-  chargeRate: 5
-  damageMod: 0.6
-  chargeStartDelay: 5
+  cooldown: 0.1
+  energyCost: 0
+  energyPerSecond: 0
+  damage: 100
+  sound: {fileID: 11400000, guid: 414779e63d8a9044780870b2356bbff8, type: 2}
+  prefab: {fileID: 827494194157081251, guid: 6edbbd263aa72e04d91d35301833414b, type: 3}
+  speed: 50
+  ttl: 10

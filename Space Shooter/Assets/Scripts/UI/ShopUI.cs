@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class ShopUI : UIElement, IItemContainer
 {
 
     public GameObject itemGO;
     public ScrollView scrollView;
+    public Text credits;
 
     Shop shop;
     Inventory buyer;
 
     List<GameObject> itemGOs = new List<GameObject>();
+
+    public Action<int> onCreditsChanged;
 
     public void AddItem(ShopItem item)
     {
@@ -26,8 +31,10 @@ public class ShopUI : UIElement, IItemContainer
         ResetShop();
         this.shop = shop;
         this.buyer = buyer;
+        buyer.onCreditsChanged += SetCredits;
         foreach (ShopItem item in shop.items)
             AddItem(item);
+        SetCredits(buyer.credits);
     }
 
     public void ResetShop()
@@ -36,6 +43,12 @@ public class ShopUI : UIElement, IItemContainer
         buyer = null;
         scrollView.Clear();
         itemGOs.Clear();
+    }
+
+    void SetCredits(int credits)
+    {
+        this.credits.text = credits.ToString();
+        onCreditsChanged?.Invoke(credits);
     }
 
     public bool OnItemDragged(Item item)

@@ -5,8 +5,14 @@ using UnityEngine.UI;
 
 public class ItemDraggable : Draggable
 {
-    [HideInInspector] public Item item;
+    Item item;
     [HideInInspector] public IItemContainer origin;
+
+    public void SetItem(Item item)
+    {
+        this.item = item;
+        GetComponent<Image>().sprite = item.icon;
+    }
 
     protected override void OnDragStart(Vector2 mousePosition)
     {

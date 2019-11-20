@@ -48,6 +48,12 @@ public class UIElement : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     }
 
+    protected void Focus()
+    {
+        Debug.Log("Focus");
+        transform.SetAsLastSibling();
+    }
+
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
         mouseOver.Insert(0, this);
